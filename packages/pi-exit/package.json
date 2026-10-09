@@ -1,0 +1,33 @@
+{
+  "name": "pi-exit",
+  "version": "0.1.0",
+  "description": "Adds /exit as a graceful alias for Pi's /quit command.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi"
+  ],
+  "files": [
+    "index.ts",
+    "README.md",
+    "package.json"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.84.2",
+    "typescript": "5.9.3",
+    "vitest": "4.1.9"
+  }
+}
