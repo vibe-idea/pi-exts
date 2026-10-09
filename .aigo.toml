@@ -1,0 +1,15 @@
+name = "pi-exit"
+schema = 1
+category = "mine"
+
+[paradigm]
+type = "vibe:coding"
+
+[[tools]]
+id = "cli:codex"
+model = "gpt-6-luna"
+thinking = "max"
+
+[[tools]]
+id = "app:vscode"
+
