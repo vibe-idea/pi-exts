@@ -1,0 +1,38 @@
+{
+  "name": "pi-delete-approval",
+  "version": "0.1.0",
+  "description": "Requires explicit user approval before the agent runs shell commands that delete local files.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "approval",
+    "safety",
+    "delete"
+  ],
+  "files": [
+    "index.ts",
+    "detect.ts",
+    "README.md",
+    "package.json"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.84.2",
+    "@types/node": "26.6.4",
+    "typescript": "5.9.3",
+    "vitest": "4.1.9"
+  }
+}
