@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  packages/pi-delete-approval:
+  packages/pi-del-approval:
     devDependencies:
       '@earendil-works/pi-coding-agent':
         specifier: 0.84.2

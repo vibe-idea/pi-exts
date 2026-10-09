@@ -27,7 +27,7 @@ export type AuditEntry = {
 };
 
 export type DeleteApprovalOptions = {
-	/** 审计日志路径；默认 `<agentDir>/pi-delete-approval.jsonl`（尊重 Pi 的 agent 目录环境变量）。 */
+	/** 审计日志路径；默认 `<agentDir>/pi-del-approval.jsonl`（尊重 Pi 的 agent 目录环境变量）。 */
 	auditFile?: string;
 };
 
@@ -35,11 +35,11 @@ export type DeleteApprovalOptions = {
 const SHELL_TOOLS = new Set(["bash", "powershell"]);
 
 const DENY_REASON =
-	"Blocked by pi-delete-approval: the user denied this delete operation. " +
+	"Blocked by pi-del-approval: the user denied this delete operation. " +
 	"Do not retry it or delete the same data another way; ask the user how to proceed if deletion is still required.";
 
 const NO_UI_REASON =
-	"Blocked by pi-delete-approval: delete operations require interactive approval, but no UI is available in this mode.";
+	"Blocked by pi-del-approval: delete operations require interactive approval, but no UI is available in this mode.";
 
 function writeAudit(file: string, entry: AuditEntry): void {
 	try {
@@ -73,7 +73,7 @@ export function createDeleteApproval(options: DeleteApprovalOptions = {}): (pi: 
 
 			// 延迟到真正写日志时才解析默认路径，避免模块加载时固化 agent 目录
 			const audit = (decision: AuditDecision) =>
-				writeAudit(options.auditFile ?? join(getAgentDir(), "pi-delete-approval.jsonl"), {
+				writeAudit(options.auditFile ?? join(getAgentDir(), "pi-del-approval.jsonl"), {
 					timestamp: new Date().toISOString(),
 					tool: event.toolName,
 					command,

@@ -27,7 +27,7 @@ function load(auditFile: string) {
 	return { ctx, select, toolCall, startSession };
 }
 
-describe("pi-delete-approval", () => {
+describe("pi-del-approval", () => {
 	let dir: string;
 	let auditFile: string;
 
@@ -38,7 +38,7 @@ describe("pi-delete-approval", () => {
 			.map((line) => JSON.parse(line) as AuditEntry);
 
 	beforeEach(() => {
-		dir = mkdtempSync(join(tmpdir(), "pi-delete-approval-"));
+		dir = mkdtempSync(join(tmpdir(), "pi-del-approval-"));
 		auditFile = join(dir, "nested", "audit.jsonl");
 	});
 

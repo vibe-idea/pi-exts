@@ -7,7 +7,7 @@
 | 包 | 作用 |
 | --- | --- |
 | [`pi-exit`](./packages/pi-exit) | 为 Pi 增加 `/exit` 命令，并以与 `/quit` 相同的方式优雅退出 |
-| [`pi-delete-approval`](./packages/pi-delete-approval) | agent 执行文件删除命令前弹窗审批，支持单次 / 会话级授权与审计日志 |
+| [`pi-del-approval`](./packages/pi-del-approval) | agent 执行文件删除命令前弹窗审批，支持单次 / 会话级授权与审计日志 |
 
 ## 环境要求
 

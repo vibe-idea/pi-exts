@@ -1,5 +1,5 @@
 {
-  "name": "pi-delete-approval",
+  "name": "pi-del-approval",
   "version": "0.1.0",
   "description": "Requires explicit user approval before the agent runs shell commands that delete local files.",
   "type": "module",

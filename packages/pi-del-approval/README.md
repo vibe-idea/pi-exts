@@ -1,6 +1,6 @@
-# pi-delete-approval
+# pi-del-approval
 
-`pi-delete-approval` 在 Pi Agent 通过 shell 工具执行**文件删除命令**前弹出审批框，由用户决定放行或阻止。
+`pi-del-approval` 在 Pi Agent 通过 shell 工具执行**文件删除命令**前弹出审批框，由用户决定放行或阻止。
 
 删除审批逻辑提取自 [pi-op-approval](https://github.com/SeiyunSky/pi-op-approval)，只保留文件删除这一类，并增加了会话级授权。
 
@@ -44,7 +44,7 @@
 
 ## 审计日志
 
-每次决策都会追加一行 JSON 到 `~/.pi/agent/pi-delete-approval.jsonl`。如果设置了 `PI_CODING_AGENT_DIR`，日志写到对应目录。
+每次决策都会追加一行 JSON 到 `~/.pi/agent/pi-del-approval.jsonl`。如果设置了 `PI_CODING_AGENT_DIR`，日志写到对应目录。
 
 ```json
 {"timestamp":"…","tool":"bash","command":"rm -rf dist","trigger":"rm -rf dist","cwd":"/repo","decision":"allow-once"}
@@ -65,20 +65,20 @@
 在本 monorepo 中直接试用：
 
 ```bash
-pi --extension ./packages/pi-delete-approval/index.ts
+pi --extension ./packages/pi-del-approval/index.ts
 ```
 
 如果包已经发布到 npm：
 
 ```bash
-pi install npm:pi-delete-approval
+pi install npm:pi-del-approval
 ```
 
 ## 开发验证
 
 ```bash
-pnpm --filter pi-delete-approval check
-pnpm --filter pi-delete-approval test
+pnpm --filter pi-del-approval check
+pnpm --filter pi-del-approval test
 ```
 
 代码结构：
