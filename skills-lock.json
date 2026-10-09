@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "setup-rules": {
+      "source": "jinsyin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/setup-rules/SKILL.md",
+      "computedHash": "b5f5a598f5ea84c4cad147c376e6eea43c01dd7cba3577c96a12202abafc813b"
+    }
+  }
+}

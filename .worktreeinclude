@@ -1,0 +1,2 @@
+# Copy installed skills to new worktrees; omit .claude/skills/ so Claude Code reads the main checkout's
+/.agents/skills/

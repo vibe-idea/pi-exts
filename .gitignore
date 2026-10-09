@@ -3,3 +3,10 @@ node_modules/
 .pnpm-store/
 coverage/
 dist/
+
+/.claude/skills/
+/.agents/skills/
+.env
+.env.dev
+.env.test
+.env.prod
